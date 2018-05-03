@@ -1,0 +1,20 @@
+<center>
+	<div class="row" style="padding-top: 11%;">
+  		<div class="col-sm-3"></div>
+  		<div class="col-sm-6">
+  		<h1 style="font-size: 61px;font-weight: 600;color: #1d9b31;padding-bottom: 1.5%;">Movies Universe</h1>
+  		<%= form_tag('/search', :method=>"get",:id=>"search_form_1111") do -%>
+  			<input  list="movies-list" type="text" name="movie_name" id="movie_srh" class="form-control txt"  style="border-radius: 1px;height: 48px;font-size: 21px;color: #1d9b31;" autofocus>
+  			
+  			
+  			<input type="submit" name="commit" value="Search" data-disable-with="Search" class="btn btn-info" style="margin-top: 2%;border-radius: 1px;font-size: 19px;background-color: #1d9b31;border-color: #1d9b31;">
+		<% end -%>
+  			
+  		</div>
+  		<div class="col-sm-3"></div>
+	</div>
+</center>
+
+
+
+

@@ -1,0 +1,35 @@
+
+  <div class="jumbotron" style="background-color: #e0e6dd; border-style: solid;border-color: #d5e0cd;
+border-width: 0px 0px 2px 1px;padding: 10px 0px 5px 0px;  ">
+  <div class="row">
+  <a href="<%= root_path %>">
+  <div class="col-sm-1" style="padding-left: 7%;padding-right: 45px;">
+  
+    <%= image_tag('logo2.png', :style => "width:50px;")%>
+  
+  </div>
+  </a>
+  <div class="col-sm-6" >
+  	<%= form_tag('/search', :method=>"get",:id=>"search_form_1111") do -%>
+        <input  list="movies-list" type="text" name="movie_name" id="movie_srh" class="form-control txt"  style="border-radius: 1px;height: 39px;font-size: 19px;color: #1d9b31;" >
+        
+        
+    <% end -%>
+  </div>
+  <div class="col-sm-1">
+  	
+  </div>
+  <div class="col-sm-4">
+  
+  </div>
+  
+</div>
+
+
+    
+  </div>
+  
+
+
+
+        

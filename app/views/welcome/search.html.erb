@@ -1,0 +1,21 @@
+<div style="padding-bottom: 7%;">
+  <%= render 'welcome/search_field'%>
+
+
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-6"  style="padding-left: 2.5%;">
+    <%= render 'welcome/search_results' %>
+  </div>
+  <div class="col-sm-5"></div>
+</div>
+
+<script>
+  $( document ).ready(function() {
+      //var cookieValue = $.cookie("keyword");
+      $('#movie_srh').val("<%= @movie_name%>");
+      $('#ss_wd_1298').text("<%= @movie_name%>");
+
+  });
+</script>
+</div>

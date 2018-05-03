@@ -1,0 +1,7 @@
+ $('#movies-list').empty();
+<% @movies_names.each do |name| %>
+	$('#movies-list').append('<option value="<%= name %>">');
+<% end %>
+
+
+  

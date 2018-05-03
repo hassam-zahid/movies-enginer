@@ -1,0 +1,7 @@
+<% if @movies.nil? || @movies.empty? %>
+	<%= render 'welcome/result_not_found'%>
+<% else %>
+	<% @movies.each do |movie|%>
+		<%= render 'single_result', movie: movie %>
+	<% end %>
+<% end %>

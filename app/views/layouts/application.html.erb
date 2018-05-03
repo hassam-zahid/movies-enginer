@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movies Universe</title>
+
+
+ 
+    <meta property="og:title" content="~ Movies Universe" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://movies-universe.com" />
+<meta property="og:image" content="<%= image_url 'background.png'%>" />
+<meta property="og:description" content="Worlds largest Movies Engine" />
+
+
+
+    <%= csrf_meta_tags %>
+    <%= favicon_link_tag 'favicon.png' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <style>
+    
+  </style>
+  </head>
+
+  <body>
+  <% if user_signed_in? %>
+  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>  
+  <% end %>
+    <div>
+      <%= yield %>
+    </div>
+<datalist id="movies-list">
+</datalist>
+
+
+
+
+
+    <script>
+      $('#movie_srh').on('input', function() {
+        var keyword = this.value;
+        $.ajax(
+                {
+                    url: "search_a",
+                    data : {keyword: keyword},
+                    success: function(result){
+                        $("#div1").html(result);
+                }}
+        );
+      });
+
+    </script>
+
+    <script>
+      $( "#search_form_1111" ).submit(function( event ) {
+           //var value = $('#movie_srh').val();
+           //$.cookie("keyword", value);
+      });
+    </script>
+    
+  </body>
+</html>
